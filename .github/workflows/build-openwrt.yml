@@ -55,7 +55,7 @@ jobs:
         swap-storage: true
         
     - name: Checkout
-      uses: actions/checkout@v3.1.0  
+      uses: actions/checkout@v4.2.0
       
     - name: Disk space
       run: |
@@ -210,7 +210,7 @@ jobs:
         keep_minimum_runs: 3
 
     - name: Remove old Releases
-      uses: dev-drprasad/delete-older-releases@v0.1.0
+      uses: dev-drprasad/delete-older-releases@v0.2.1
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       with:
         keep_latest: 4
